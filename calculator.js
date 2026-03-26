@@ -8,6 +8,7 @@ const state = {
   operator: null,
   operand: null,
   justCalculated: false,
+  waitingForOperand: false,
 };
 
 // ── DOM refs ──
@@ -42,10 +43,11 @@ function render() {
 
 // ── Input handlers ──
 function inputDigit(digit) {
-  if (state.justCalculated) {
+  if (state.justCalculated || state.waitingForOperand) {
     state.current = digit;
-    state.expression = '';
+    state.expression = state.justCalculated ? '' : state.expression;
     state.justCalculated = false;
+    state.waitingForOperand = false;
   } else {
     state.current = state.current === '0' ? digit : state.current + digit;
   }
@@ -53,9 +55,10 @@ function inputDigit(digit) {
 }
 
 function inputDot() {
-  if (state.justCalculated) {
+  if (state.justCalculated || state.waitingForOperand) {
     state.current = '0.';
     state.justCalculated = false;
+    state.waitingForOperand = false;
   } else if (!state.current.includes('.')) {
     state.current += '.';
   }
@@ -77,11 +80,8 @@ function inputOperator(op) {
 
   state.operator = op;
   state.justCalculated = false;
+  state.waitingForOperand = true;
   render();
-
-  // Next digit input will start fresh
-  const prev = state.current;
-  state.current = prev;
 }
 
 function inputEquals() {
@@ -120,6 +120,7 @@ function inputClear() {
   state.operator = null;
   state.operand = null;
   state.justCalculated = false;
+  state.waitingForOperand = false;
   render();
 }
 
