@@ -44,4 +44,7 @@
   width: 18px;
   height: 18px;
   pointer-events: none;
+  color: var(--color-content-primary);
+  display: flex;
+  align-items: center;
 }

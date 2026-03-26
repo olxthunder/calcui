@@ -14,8 +14,13 @@ const state = {
 // ── DOM refs ──
 const resultEl    = document.querySelector('.display__result');
 const expressionEl = document.querySelector('.display__expression');
+const displayEl   = document.querySelector('.display');
 const themeBtn    = document.querySelector('.header__theme-btn');
 const themeIcon   = document.querySelector('.header__theme-icon');
+
+// ── SVG icons ──
+const ICON_MOON = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M15.5 9.5A6.5 6.5 0 019 16a6.5 6.5 0 010-13 5 5 0 006.5 6.5z" fill="currentColor"/></svg>';
+const ICON_SUN  = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="3" fill="currentColor"/><path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.22 3.22l1.42 1.42M13.36 13.36l1.42 1.42M3.22 14.78l1.42-1.42M13.36 4.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
 
 // ── Theme ──
 let isDark = false;
@@ -23,7 +28,7 @@ let isDark = false;
 themeBtn.addEventListener('click', () => {
   isDark = !isDark;
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeIcon.textContent = isDark ? '☀️' : '🌙';
+  themeIcon.innerHTML = isDark ? ICON_SUN : ICON_MOON;
 });
 
 // ── Render ──
@@ -43,6 +48,7 @@ function updateFontSizes() {
 function render() {
   resultEl.textContent = state.current;
   expressionEl.textContent = state.expression;
+  displayEl.classList.toggle('display--error', state.current === 'Error');
   updateFontSizes();
 
   // Highlight active operator button
