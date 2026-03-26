@@ -30,6 +30,7 @@
     white-space: nowrap;
     min-height: 38px;
     box-sizing: border-box;
+    padding-left: 2px;
   }
   
   .display__result {
@@ -44,6 +45,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     box-sizing: border-box;
+    padding-left: 2px;
+    /* Фіксована висота щоб не падало при error стані */
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
   
   /* ── Adaptive font sizes ── */
@@ -67,6 +74,7 @@
     color: #ef4444;
     text-align: right;
     width: 100%;
+    min-height: 16px;
   }
   
   .display--error .display__error-label {
