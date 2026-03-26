@@ -2,75 +2,73 @@
    Display Component
    ============================================ */
 
-.display {
-  width: 100%;
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-bg-overlay);
-  border-radius: var(--spacing-5);
-  padding: var(--spacing-8);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  min-height: 169px;
-  justify-content: flex-end;
-  overflow: visible;
-  box-sizing: border-box;
-}
-
-.display__expression {
-  font-family: 'Inter', sans-serif;
-  font-size: 32px;
-  font-weight: 300;
-  line-height: normal;
-  color: var(--color-content-secondary);
-  text-align: right;
-  width: 100%;
-  padding: 0 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-height: 38px;
-}
-
-.display__result {
-  font-family: 'Inter', sans-serif;
-  font-size: 64px;
-  font-weight: 300;
-  line-height: 64px;
-  color: var(--color-content-primary);
-  text-align: right;
-  width: 100%;
-  padding: 0 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.display--error {
-  border-color: #ef4444;
-}
-
-.display--error .display__result {
-  color: #ef4444;
-}
-
-.display__error-label {
-  display: none;
-  font-size: 12px;
-  color: #ef4444;
-  text-align: right;
-  width: 100%;
-  margin-top: 4px;
-}
-
-.display--error .display__error-label {
-  display: block;
-}
-
-.display__result--md  { font-size: 48px; line-height: 48px; }
-.display__result--sm  { font-size: 36px; line-height: 36px; }
-.display__result--xs  { font-size: 28px; line-height: 28px; }
-
-.display__expression--sm  { font-size: 24px; }
-.display__expression--xs  { font-size: 18px; }
+   .display {
+    width: 100%;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-bg-overlay);
+    border-radius: var(--spacing-5);
+    padding: var(--spacing-8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    min-height: 169px;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+  
+  .display__expression {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: normal;
+    color: var(--color-content-secondary);
+    text-align: right;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 38px;
+    box-sizing: border-box;
+  }
+  
+  .display__result {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--color-content-primary);
+    text-align: right;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  
+  /* ── Adaptive font sizes ── */
+  .display__result--md { font-size: 48px; }
+  .display__result--sm { font-size: 36px; }
+  .display__result--xs { font-size: 28px; }
+  
+  .display__expression--sm { font-size: 24px; }
+  .display__expression--xs { font-size: 18px; }
+  
+  /* ── Error state ── */
+  .display--error {
+    border-color: #ef4444;
+  }
+  
+  .display__error-label {
+    display: none;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #ef4444;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .display--error .display__error-label {
+    display: block;
+  }
