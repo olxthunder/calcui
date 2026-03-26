@@ -1,0 +1,84 @@
+/* ============================================
+   Button Component
+   Types: number | operator | equals | utility
+   States: default | hover | pressed | active
+   ============================================ */
+
+.btn {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--spacing-3);
+  border: 1px solid var(--color-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.08s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+/* в”Ђв”Ђ Number в”Ђв”Ђ */
+.btn--number {
+  background: var(--color-button-number-default);
+  color: var(--color-content-primary);
+}
+.btn--number:hover {
+  background: var(--color-button-number-hover);
+}
+.btn--number:active {
+  background: var(--color-button-number-pressed);
+}
+
+/* в”Ђв”Ђ Operator в”Ђв”Ђ */
+.btn--operator {
+  background: var(--color-button-operator-default);
+  color: var(--color-accent-default);
+}
+.btn--operator:hover {
+  background: var(--color-button-operator-hover);
+}
+.btn--operator:active {
+  background: var(--color-button-operator-pressed);
+}
+.btn--operator.is-active {
+  background: var(--color-accent-default);
+  color: var(--color-accent-text);
+}
+
+/* в”Ђв”Ђ Equals в”Ђв”Ђ */
+.btn--equals {
+  background: var(--color-accent-default);
+  color: var(--color-accent-text);
+}
+.btn--equals:hover {
+  background: var(--color-accent-hover);
+}
+.btn--equals:active {
+  background: var(--color-accent-pressed);
+}
+
+/* в”Ђв”Ђ Utility в”Ђв”Ђ */
+.btn--utility {
+  background: var(--color-button-utility-default);
+  color: var(--color-content-secondary);
+}
+.btn--utility:hover {
+  background: var(--color-button-utility-hover);
+}
+.btn--utility:active {
+  background: var(--color-button-utility-pressed);
+}
+
+/* в”Ђв”Ђ Zero (wide) в”Ђв”Ђ */
+.btn--zero {
+  width: 144px;
+}
