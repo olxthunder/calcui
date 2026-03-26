@@ -19,11 +19,11 @@
   --color-content-tertiary:        #94A3B8;
   --color-content-inverse:         #FFFFFF;
 
-  /* Accent */
-  --color-accent-default:          #16A34A;
-  --color-accent-hover:            #15803D;
-  --color-accent-pressed:          #166534;
-  --color-accent-subtle:           #DCFCE7;
+  /* Accent — ОНОВЛЕНО: синій #2563EB */
+  --color-accent-default:          #2563EB;
+  --color-accent-hover:            #1D4ED8;
+  --color-accent-pressed:          #1E40AF;
+  --color-accent-subtle:           #DBEAFE;
   --color-accent-text:             #FFFFFF;
 
   /* Button — Number */
@@ -73,11 +73,11 @@
   --color-content-tertiary:        #64748B;
   --color-content-inverse:         #FFFFFF;
 
-  /* Accent */
-  --color-accent-default:          #22C55E;
-  --color-accent-hover:            #16A34A;
-  --color-accent-pressed:          #15803D;
-  --color-accent-subtle:           #14532D;
+  /* Accent — dark mode синій */
+  --color-accent-default:          #3B82F6;
+  --color-accent-hover:            #2563EB;
+  --color-accent-pressed:          #1D4ED8;
+  --color-accent-subtle:           #1E3A5F;
   --color-accent-text:             #FFFFFF;
 
   /* Button — Number */
@@ -89,7 +89,7 @@
   --color-button-operator-default: #1E3A5F;
   --color-button-operator-hover:   #1E40AF;
   --color-button-operator-pressed: #1D4ED8;
-  --color-button-operator-active:  #14532D;
+  --color-button-operator-active:  #1E3A5F;
 
   /* Button — Utility */
   --color-button-utility-default:  #1E293B;
