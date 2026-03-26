@@ -49,6 +49,11 @@ function render() {
   resultEl.textContent = state.current;
   expressionEl.textContent = state.expression;
   displayEl.classList.toggle('display--error', state.current === 'Error');
+  if (state.current === 'Error') {
+    resultEl.style.fontSize = '36px';
+  } else {
+    resultEl.style.fontSize = '';
+  }
   updateFontSizes();
 
   // Highlight active operator button
