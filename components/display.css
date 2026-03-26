@@ -42,6 +42,7 @@
   width: 100%;
   height: 64px;
   overflow: hidden;
+  padding: 0 6px 0 4px;
   text-ovflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
