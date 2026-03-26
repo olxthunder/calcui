@@ -1,0 +1,47 @@
+/* ============================================
+   Header Component
+   ============================================ */
+
+.header {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.header__logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  color: var(--color-content-primary);
+}
+
+.header__theme-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-button-theme-default);
+  box-shadow: var(--shadow-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.12s ease;
+  flex-shrink: 0;
+}
+
+.header__theme-btn:hover {
+  background: var(--color-button-theme-hover);
+}
+
+.header__theme-icon {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
