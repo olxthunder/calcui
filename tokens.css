@@ -1,0 +1,114 @@
+/* ============================================
+   CalcUI Design Tokens
+   Auto-generated from Figma Variables
+   DO NOT edit manually — sync from Figma
+   ============================================ */
+
+:root,
+[data-theme="light"] {
+
+  /* Backgrounds */
+  --color-bg-primary:              #FFFFFF;
+  --color-bg-secondary:            #F8FAFC;
+  --color-bg-elevated:             #F1F5F9;
+  --color-bg-overlay:              #E2E8F0;
+
+  /* Content */
+  --color-content-primary:         #1E293B;
+  --color-content-secondary:       #64748B;
+  --color-content-tertiary:        #94A3B8;
+  --color-content-inverse:         #FFFFFF;
+
+  /* Accent */
+  --color-accent-default:          #16A34A;
+  --color-accent-hover:            #15803D;
+  --color-accent-pressed:          #166534;
+  --color-accent-subtle:           #DCFCE7;
+  --color-accent-text:             #FFFFFF;
+
+  /* Button — Number */
+  --color-button-number-default:   #FFFFFF;
+  --color-button-number-hover:     #F1F5F9;
+  --color-button-number-pressed:   #E2E8F0;
+
+  /* Button — Operator */
+  --color-button-operator-default: #EFF6FF;
+  --color-button-operator-hover:   #DBEAFE;
+  --color-button-operator-pressed: #BFDBFE;
+  --color-button-operator-active:  #DCFCE7;
+
+  /* Button — Utility */
+  --color-button-utility-default:  #F8FAFC;
+  --color-button-utility-hover:    #F1F5F9;
+  --color-button-utility-pressed:  #E2E8F0;
+
+  /* Button — Theme toggle */
+  --color-button-theme-default:    #FFFFFF;
+  --color-button-theme-hover:      #F1F5F9;
+
+  /* Spacing */
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+
+  /* Shadow */
+  --shadow-card:   0px 8px 24px 0px rgba(0, 0, 0, 0.12);
+  --shadow-button: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+
+  /* Backgrounds */
+  --color-bg-primary:              #0F172A;
+  --color-bg-secondary:            #1E293B;
+  --color-bg-elevated:             #334155;
+  --color-bg-overlay:              #475569;
+
+  /* Content */
+  --color-content-primary:         #F8FAFC;
+  --color-content-secondary:       #94A3B8;
+  --color-content-tertiary:        #64748B;
+  --color-content-inverse:         #FFFFFF;
+
+  /* Accent */
+  --color-accent-default:          #22C55E;
+  --color-accent-hover:            #16A34A;
+  --color-accent-pressed:          #15803D;
+  --color-accent-subtle:           #14532D;
+  --color-accent-text:             #FFFFFF;
+
+  /* Button — Number */
+  --color-button-number-default:   #334155;
+  --color-button-number-hover:     #475569;
+  --color-button-number-pressed:   #64748B;
+
+  /* Button — Operator */
+  --color-button-operator-default: #1E3A5F;
+  --color-button-operator-hover:   #1E40AF;
+  --color-button-operator-pressed: #1D4ED8;
+  --color-button-operator-active:  #14532D;
+
+  /* Button — Utility */
+  --color-button-utility-default:  #1E293B;
+  --color-button-utility-hover:    #334155;
+  --color-button-utility-pressed:  #475569;
+
+  /* Button — Theme toggle */
+  --color-button-theme-default:    #334155;
+  --color-button-theme-hover:      #475569;
+
+  /* Spacing — same as light */
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+
+  /* Shadow */
+  --shadow-card:   0px 8px 24px 0px rgba(0, 0, 0, 0.4);
+  --shadow-button: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+}
