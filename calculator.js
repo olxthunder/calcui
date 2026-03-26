@@ -27,9 +27,23 @@ themeBtn.addEventListener('click', () => {
 });
 
 // ── Render ──
+function updateFontSizes() {
+  const resultLen = state.current.length;
+  resultEl.classList.remove('display__result--md', 'display__result--sm', 'display__result--xs');
+  if      (resultLen >= 13) resultEl.classList.add('display__result--xs');
+  else if (resultLen >= 10) resultEl.classList.add('display__result--sm');
+  else if (resultLen >= 7)  resultEl.classList.add('display__result--md');
+
+  const exprLen = state.expression.length;
+  expressionEl.classList.remove('display__expression--sm', 'display__expression--xs');
+  if      (exprLen >= 20) expressionEl.classList.add('display__expression--xs');
+  else if (exprLen >= 15) expressionEl.classList.add('display__expression--sm');
+}
+
 function render() {
   resultEl.textContent = state.current;
   expressionEl.textContent = state.expression;
+  updateFontSizes();
 
   // Highlight active operator button
   document.querySelectorAll('.btn--operator').forEach(btn => {

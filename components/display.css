@@ -42,3 +42,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.display__result--md  { font-size: 48px; line-height: 48px; }
+.display__result--sm  { font-size: 36px; line-height: 36px; }
+.display__result--xs  { font-size: 28px; line-height: 28px; }
+
+.display__expression--sm  { font-size: 24px; }
+.display__expression--xs  { font-size: 18px; }
